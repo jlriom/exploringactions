@@ -2,15 +2,15 @@ name: GitHub Actions Demo
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Enter the name'
-        required: true
-        default: 'GitHub User'
-      deploy:
-        description: 'Deploy code after build (yes/no)'
-        required: false
-        default: 'yes'
+    # inputs:
+    #   name:
+    #     description: 'Enter the name'
+    #     required: true
+    #     default: 'GitHub User'
+    #   deploy:
+    #     description: 'Deploy code after build (yes/no)'
+    #     required: false
+    #     default: 'yes'
 
 jobs:
   Example-Actions-Job:
@@ -71,9 +71,9 @@ jobs:
       
       - run: echo "This job's status is ${{ job.status }}."
 
-  Second-Job:
-    name: The second job running on another runner
-    runs-on: self-hosted
-    needs: Example-Actions-Job
-    steps:
-      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
+  # Second-Job:
+  #   name: The second job running on another runner
+  #   runs-on: self-hosted
+  #   needs: Example-Actions-Job
+  #   steps:
+  #     - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
