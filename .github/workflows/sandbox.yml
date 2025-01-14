@@ -33,9 +33,10 @@ jobs:
                 dotnet --list-runtimes 
                 dotnet --list-sdks
       
-
+            # to swap slots: az webapp deployment slot swap --slot xxx --name xxx --resource-group xxx
             - name: Azure Swap Slots
               uses: azure/CLI@v1
               with:
                 inlineScript: |
                   az --version
+                  
