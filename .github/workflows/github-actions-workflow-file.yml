@@ -50,11 +50,19 @@ jobs:
       - name: Setup dotnet on runner
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '3.x'
+          dotnet-version: '9.x'
       
       - name: Display dotnet version
         run: dotnet --version
-      
+
+      - name: Dotnet runtimes and SDKs
+        run: |
+          dotnet --version
+          dotnet --list-runtimes 
+          dotnet --list-sdks
+
+        
+
       - run: echo "The preinstalled tools are located here on the runner ${{ runner.tool_cache }}."
       
       - name: List files in tool cache
