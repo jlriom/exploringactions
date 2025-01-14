@@ -33,3 +33,9 @@ jobs:
                 dotnet --list-runtimes 
                 dotnet --list-sdks
       
+
+            - name: Azure Swap Slots
+              uses: azure/CLI@v1
+              with:
+                inlineScript: |
+                  az --version
